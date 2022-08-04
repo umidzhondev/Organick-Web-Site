@@ -1,0 +1,73 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $primary-color;
+    letter-spacing: .36px;
+    font-family:$font-roboto;
+}
+
+.container {
+    max-width: 1480px;
+    width: 100%;
+    margin: 0 auto;
+    padding-inline: 30px;
+
+    @include responsive(lg) {
+        min-width: 100vw;
+    }
+    @include responsive(xs) {
+       padding-inline: 20px;
+    }
+}
+
+
+section {
+    width: 100%;
+}
+
+[class*="__content"] {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+i,
+button,
+img {
+    cursor: pointer;
+}

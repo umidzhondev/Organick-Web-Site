@@ -1,0 +1,1162 @@
+// * Hero Section Styles
+.hero {
+    &__main {
+        position: relative;
+        padding: 220px 0 250px 0;
+
+        @include responsive(md) {
+            padding: 200px 0;
+        }
+
+        @include responsive(sm) {
+            padding: 150px 0;
+        }
+
+        @include responsive(xs) {
+            padding: 100px 0;
+        }
+    }
+
+    &__content {
+        width: 100%;
+    }
+
+    &__info {
+        @include flex(flex-start, flex-start, column);
+        width: 500px;
+
+        @include responsive(sm) {
+            width: 80%;
+        }
+
+        @include responsive(xs) {
+            width: 100%;
+        }
+    }
+
+    &__suptitle {
+        @extend .title-1;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 120%;
+        margin-bottom: 30px;
+
+        @include responsive(md) {
+            font-size: 60px;
+        }
+
+        @include responsive(sm) {
+            font-size: 50px;
+        }
+
+        @include responsive(xs) {
+            font-size: 40px;
+        }
+
+        @include responsive(xxs) {
+            font-size: 35px;
+        }
+    }
+
+    &__bg {
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            z-index: -1;
+        }
+    }
+
+    &__footer {
+        width: 100%;
+        background-color: #fff;
+        padding: 140px 0;
+
+        @include responsive(lg) {
+            padding: 100px 0;
+        }
+
+        @include responsive(md) {
+            padding: 60px 0;
+        }
+
+        @include responsive(xs) {
+            padding: 50px 0;
+        }
+    }
+
+    &__cards {
+        @include flex(space-between, stretch, row);
+        gap: 50px;
+
+        @include responsive(md) {
+            gap: 20px;
+        }
+
+        @include responsive(sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__card {
+        border-radius: 30px;
+        position: relative;
+        overflow: hidden;
+        @include flex(center, flex-start, column);
+        flex: 1;
+        padding: 105px 55px;
+
+        @include responsive(md) {
+            padding: 100px 40px;
+        }
+
+        @include responsive(sm) {
+            padding: 80px 40px;
+        }
+
+        @include responsive(xs) {
+            padding: 60px 40px;
+        }
+
+        span {
+            @extend .title-1;
+        }
+
+        h3 {
+            font-size: 40px;
+            line-height: 52px;
+            font-weight: 400;
+            width: 52%;
+
+            @include responsive(lg) {
+                width: 78%;
+            }
+
+            @include responsive(md) {
+                width: 100%;
+            }
+
+            @include responsive(sm) {
+                font-size: 35px;
+            }
+
+            @include responsive(xs) {
+                font-size: 30px;
+            }
+
+            @include responsive(xxs) {
+                line-height: 1.2;
+                font-size: 26px;
+            }
+        }
+
+        h3,
+        span {
+            position: relative;
+            z-index: 99;
+        }
+
+        &-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+
+        &:first-child {
+
+            span,
+            h3 {
+                color: #fff;
+            }
+        }
+
+        &:last-child {
+            span {
+                color: $green-color;
+            }
+        }
+    }
+}
+
+// * About Section Styles
+.about {
+    background-color: #f9f8f8;
+    @extend .section-padding;
+
+    &__content {
+        @include flex(space-between, center, row);
+        gap: 30px;
+
+        @include responsive(lg) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__imgbox {
+        display: flex;
+        flex: 1;
+    }
+
+    &__info {
+        @include flex(flex-start, flex-start, column);
+        flex: 1;
+
+        @include responsive(xs) {
+            text-align: center;
+        }
+    }
+
+    .section__header-suptitle {
+        @include responsive(xs) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .section__header-title {
+        width: 78%;
+        margin-bottom: 22px;
+
+        @include responsive(xl) {
+            width: 100%;
+        }
+
+        @include responsive(lg) {
+            width: 60%;
+        }
+
+        @include responsive(md) {
+            width: 100%;
+        }
+
+        @include responsive(xs) {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__description {
+        @extend .description-1;
+        margin-bottom: 56px;
+
+        @include responsive(xl) {
+            margin-bottom: 40px;
+        }
+
+        @include responsive(lg) {
+            width: 70%;
+        }
+
+        @include responsive(md) {
+            width: 100%;
+        }
+
+        @include responsive(xxs) {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__items {
+        width: 100%;
+        @include flex(flex-start, flex-start, column);
+        gap: 25px;
+        margin-bottom: 45px;
+    }
+
+    &__item {
+        @include flex(flex-start, center, row);
+        flex: 1;
+        gap: 20px;
+
+        &-imgbox {
+            @include center;
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            background: #fff;
+
+            img {
+                width: 46px;
+                height: 46px;
+
+                @include responsive(xs) {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+
+        &-texts {
+            width: 79%;
+            @include flex(flex-start, flex-start, column);
+
+            h4 {
+                font-weight: 400;
+                font-size: 25px;
+                line-height: 1.3;
+                margin-bottom: 9px;
+
+                @include responsive(sm) {
+                    font-size: 22px;
+                }
+
+                @include responsive(xs) {
+                    font-size: 20px;
+                }
+            }
+
+            p {
+                @extend .description-1;
+
+                @include responsive(xs) {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+// * Products Section Styles
+.products {
+    @extend .section-padding;
+
+    &__content {
+        @include flex(center, center, column);
+    }
+
+    &__header {
+        @include flex(center, center, column);
+        margin-bottom: 42px;
+    }
+
+    &__cards {
+        @extend .product-cards;
+    }
+
+    &__card {
+        background-color: #f9f8f8;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+
+        &-suptitle {
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 27px;
+            font-family: $font-opensans;
+            background-color: $primary-color;
+            padding: 5px 20px;
+            border-radius: 8px;
+            color: #fff;
+            width: max-content;
+        }
+
+        &-imgbox {
+            height: 387px;
+            margin-bottom: 19px;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+
+            @include responsive(lg) {
+                height: 275px;
+            }
+
+            @include responsive(sm) {
+                height: 220px;
+            }
+
+            @include responsive(xs) {
+                text-align: center;
+            }
+        }
+
+        &-title {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 35px;
+            margin-bottom: 10px;
+
+            @include responsive(sm) {
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+
+        .line {
+            height: 1px;
+            background-color: #d4d4d4;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        &-oldprice {
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 32px;
+            color: #b8b8b8;
+            text-decoration-line: line-through;
+        }
+
+        &-newprice {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 32px;
+            color: $primary-color;
+        }
+    }
+
+    &__footer {
+        width: 100%;
+        @include flex(space-between, center, row);
+
+        @include responsive(lg) {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    &__prices {
+        @include flex(space-between, center, row);
+        gap: 10px;
+        font-family: $font-opensans;
+
+        @include responsive(sm) {
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        @include responsive(xs) {
+            flex-direction: row;
+            gap: 10px;
+        }
+    }
+
+    &__rating {
+        @include center;
+        gap: 2px;
+    }
+}
+
+// * Testimonial Section Styles
+.testimonial {
+    position: relative;
+    @extend .section-padding;
+
+    &__bg {
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+
+            @include responsive(lg) {
+                object-fit: contain;
+            }
+        }
+    }
+
+    &__content {
+        @include flex(center, center, column);
+        text-align: center;
+    }
+
+    &__header {
+        @include center;
+        flex-direction: column;
+        margin-bottom: 60px;
+
+        @include responsive(xs) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__main {
+        width: 966px;
+        margin: 0 auto;
+        @include flex(center, center, column);
+        text-align: center;
+
+        @include responsive(lg) {
+            width: 90%;
+        }
+
+        @include responsive(md) {
+            width: 75%;
+        }
+
+        @include responsive(xxs) {
+            width: 85%;
+        }
+
+        &-img {
+            width: 115px;
+            height: 115px;
+            margin-bottom: 20px;
+        }
+
+        &-rating {
+            @include center;
+            gap: 2px;
+            margin-bottom: 34px;
+
+            img {
+                width: 21px;
+                height: 21px;
+            }
+
+            @include responsive(xs) {
+                margin-bottom: 20px;
+            }
+        }
+
+        &-description {
+            @extend .description-1;
+            margin-bottom: 23px;
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 34px;
+        }
+
+        &-subtitle {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 27px;
+            color: $black-color;
+        }
+    }
+
+    .line {
+        height: 2px;
+        background-color: #525c60;
+        width: 100%;
+        margin: 100px 0;
+
+        @include responsive(xs) {
+            margin: 80px 0;
+        }
+
+        @include responsive(xxs) {
+            margin: 50px 0;
+        }
+    }
+
+    &__items {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        @include responsive(lg) {
+            flex-wrap: wrap;
+            gap: 26px;
+        }
+    }
+
+    &__item {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        border: 5px solid #ffffff;
+        outline: 6px solid #7eb693;
+        @include center;
+        flex-direction: column;
+
+        @include responsive(lg) {
+            width: 190px;
+            height: 190px;
+        }
+
+        @include responsive(md) {
+            height: 180px;
+            width: 180px;
+        }
+
+        @include responsive(xs) {
+            height: 150px;
+            width: 150px;
+        }
+
+        @include responsive(xxs) {
+            height: 140px;
+            width: 140px;
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 42px;
+            line-height: 55px;
+
+            @include responsive(sm) {
+                font-size: 38px;
+            }
+
+            @include responsive(xxs) {
+                font-size: 34px;
+                line-height: 1.2;
+            }
+        }
+
+        span {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 32px;
+            font-family: $font-opensans;
+
+            @include responsive(sm) {
+                font-size: 16px;
+            }
+
+            @include responsive(xs) {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+// * Offer Section Styles
+.offer {
+    @extend .section-padding;
+    background-color: $primary-color;
+
+    &__header {
+        width: 100%;
+        @include flex(space-between, flex-end, row);
+        margin-bottom: 44px;
+
+        @include responsive(md) {
+            align-items: center;
+            flex-direction: column;
+        }
+
+        &-texts {
+            @include flex(flex-start, flex-start, column);
+
+            .section__header-title {
+                color: #fff;
+            }
+
+            @include responsive(md) {
+                width: 100%;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            @include responsive(xxs) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__cards {
+        @extend .product-cards;
+    }
+}
+
+// * Eco Section Styles
+.eco {
+    &__content {
+        @include flex(center, center, column);
+    }
+
+    &__main {
+        @include flex(center, stretch, row);
+
+        @include responsive(sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__imgbox {
+        display: flex;
+        flex: 1;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__info {
+        flex: 1;
+
+        &-main {
+            @include flex(flex-start, flex-start, column);
+            padding: 40px 60px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 30px 0px 0px 30px;
+            position: relative;
+            top: 40px;
+            right: 60px;
+
+            @include responsive(lg) {
+                top: 20px;
+                right: 40px;
+            }
+
+            @include responsive(md) {
+                padding: 20px;
+                position: static;
+            }
+
+            @include responsive(sm) {
+                padding: 20px 0;
+            }
+        }
+
+        &-header {
+            width: 310px;
+            margin-bottom: 30px;
+
+            @include responsive(lg) {
+                margin-bottom: 20px;
+            }
+
+            @include responsive(md) {
+                width: 100%;
+
+                .title-2 {
+                    font-size: 38px;
+                    line-height: 1.1;
+                }
+            }
+        }
+    }
+
+    &__items {
+        width: 100%;
+        @include flex(flex-start, flex-start, column);
+        gap: 10px;
+    }
+
+    &__item {
+        width: 100%;
+
+        h4 {
+            font-weight: 700;
+            font-size: 23px;
+            line-height: 32px;
+            margin-bottom: 5px;
+
+            @include responsive(xs) {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            @extend .description-1;
+
+            @include responsive(lg) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__footer {
+        width: 100%;
+        @extend .section-padding;
+        background-color: #eff6f1;
+    }
+
+    &__cards {
+        width: 100%;
+        @extend .products__cards;
+    }
+
+    &__card {
+        height: 580px;
+        @include center;
+        position: relative;
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        &-button {
+            z-index: 3;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 35px;
+            padding: 30px 80px;
+            background: #ffffff;
+            border-radius: 20px;
+            color: $primary-color;
+
+            @include responsive(xxl) {
+                font-size: 22px;
+                line-height: 1.1;
+                padding: 25px 60px;
+            }
+
+            @include responsive(sm) {
+                font-size: 18px;
+                padding: 23px 0;
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            @include responsive(xs) {
+                padding: 23px 70px;
+                width: max-content;
+            }
+
+            @include responsive(xxs) {
+                padding: 23px 50px;
+                border-radius: 10px;
+            }
+        }
+
+        @include responsive(lg) {
+            height: 500px;
+        }
+
+        @include responsive(md) {
+            height: 450px;
+        }
+
+        @include responsive(sm) {
+            height: 420px;
+        }
+
+        @include responsive(xs) {
+            height: 360px;
+        }
+    }
+}
+
+// * News Section Styles
+.news {
+    @extend .section-padding;
+
+    &__content {
+        @include flex(center, center, column);
+    }
+
+    &__header {
+        width: 100%;
+        @include flex(space-between, flex-end, row);
+        gap: 60px;
+        margin-bottom: 104px;
+
+        @include responsive(xxl) {
+            gap: 0;
+        }
+
+        @include responsive(xl) {
+            &-texts {
+                width: 75%;
+            }
+        }
+
+        @include responsive(md) {
+            margin-bottom: 60px;
+            @include center;
+            flex-direction: column;
+
+            &-texts {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 25px;
+            }
+        }
+
+        @include responsive(sm) {
+            .title-2 {
+                font-size: 34px;
+                line-height: 1.5;
+            }
+        }
+
+        @include responsive(xs) {
+            &-texts {
+                .title-2 {
+                    @include responsive(xs) {
+                        line-height: 1.5;
+                        font-size: 30px;
+                    }
+
+                    @include responsive(xxs) {
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__cards {
+        width: 100%;
+        @include flex(space-between, flex-start, row);
+        gap: 30px;
+
+        @include responsive(sm) {
+            gap: 20px;
+        }
+
+        @include responsive(xs) {
+            flex-direction: column;
+        }
+    }
+
+    &__card {
+        border-radius: 30px;
+        @include flex(center, center, column);
+        position: relative;
+        flex: 1;
+
+        &-bg {
+            height: 515px;
+            border-radius: 30px;
+            object-fit: cover;
+            width: 100%;
+
+            @include responsive(md) {
+                height: 420px;
+            }
+        }
+
+        &-main {
+            z-index: 3;
+            width: 92%;
+            margin: 0 auto;
+            padding: 50px;
+            box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.14);
+            border-radius: 30px;
+            background-color: #fff;
+            @include flex(flex-start, flex-start, column);
+            position: absolute;
+            bottom: -72px;
+
+            @include responsive(lg) {
+                width: 89%;
+                padding: 40px;
+            }
+
+            @include responsive(md) {
+                padding: 40px 20px;
+                bottom: -90px;
+            }
+
+            @include responsive(sm) {
+                padding: 30px 20px;
+                bottom: -30px;
+            }
+
+            @include responsive(xs) {
+                bottom: 30px;
+            }
+        }
+
+        &-user {
+            @include flex(flex-start, center, row);
+            gap: 10px;
+            margin-bottom: 16px;
+
+            img {
+                width: 18px;
+            }
+
+            span {
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 23px;
+            }
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 35px;
+            margin-bottom: 38px;
+
+            @include responsive(lg) {
+                margin-bottom: 20px;
+            }
+
+            @include responsive(md) {
+                font-size: 21px;
+                margin-bottom: 10px;
+            }
+
+            @include responsive(sm) {
+                font-size: 18px;
+                line-height: 1.7;
+            }
+        }
+
+        &-description {
+            @extend .description-1;
+            width: 80%;
+            margin-bottom: 20px;
+
+            @include responsive(md) {
+                width: 100%;
+            }
+
+            @include responsive(sm) {
+                font-size: 16px;
+            }
+        }
+
+        &-button {
+            @include flex(flex-start, center, row);
+            gap: 10px;
+            background-color: transparent;
+            @include hoverEffect;
+
+            span {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 28px;
+                color: $primary-color;
+                @include hoverEffect;
+
+                @include responsive(sm) {
+                    font-size: 16px;
+                }
+            }
+
+            img {
+                width: 19px;
+                height: 19px;
+            }
+
+            &:hover {
+                text-decoration: underline solid $primary-color;
+            }
+        }
+    }
+}
+
+// * Subscribe Section Styles
+.subscribe {
+    padding: 150px 0;
+
+    @include responsive(lg) {
+        padding: 110px 0;
+    }
+ 
+    @include responsive(md) {
+        padding: 100px 0;
+    }
+ 
+    @include responsive(sm) {
+        padding: 80px 0;
+    }
+ 
+    @include responsive(xs) {
+        padding: 60px 0;
+        padding-top: 30px;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 5;
+        padding: 100px 70px;
+        @include flex(space-between, center, row);
+        @include responsive(lg) {
+            padding: 100px 30px;
+        }
+        @include responsive(md) {
+           flex-direction: column;
+        }
+        @include responsive(xs) {
+            padding: 80px 20px;
+        }
+    }
+
+    &__bg {
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            object-fit: cover;
+            z-index: -1;
+        }
+    }
+
+    &__text {
+        width: 325px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 60px;
+        text-transform: capitalize;
+        @include responsive(lg) {
+           font-size: 42px;
+        }
+        @include responsive(md) {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        @include responsive(xs) {
+            font-size: 36px;
+            line-height: 1.4;
+        }
+    }
+
+    &__form {
+        @include flex(flex-end,center,row);
+        gap: 10px;
+        margin-left: auto;
+
+        input {
+            @extend .description-1;
+            padding: 26px 30px;
+            padding-right: 100px;
+            background: #FFFFFF;
+            border: 1px solid #CCCCCC;
+            border-radius: 16px;
+            @include responsive(lg) {
+                padding: 22px 30px;
+                padding-right: 80px;
+            }
+            @include responsive(sm) {
+               width: 100%;
+            }
+            @include responsive(xxs) {
+                padding: 18px 30px;
+            }
+        }
+        @include responsive(md) {
+           margin-left: 0;
+        }
+        @include responsive(sm) {
+           flex-direction: column;
+           justify-content: center;
+           width: 100%;
+           button{
+            width: 100%;
+           }
+        }
+    }
+}

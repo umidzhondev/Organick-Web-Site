@@ -1,0 +1,90 @@
+.title-1 {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 65px;
+    letter-spacing: 0.36px;
+    text-transform: capitalize;
+    color: $green-color;
+    font-family: $font-yellowtail;
+
+    @include responsive(xs) {
+        font-size: 26px;
+    }
+}
+
+.title-2 {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 58px;
+    color: $primary-color;
+    @include responsive(sm) {
+       font-size:40px;
+    }
+    @include responsive(xs) {
+       line-height: 1.5;
+       font-size: 30px;
+    }
+
+    @include responsive(xxs) {
+       font-size: 26px;
+    }
+}
+
+.description-1 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.77;
+    font-family: $font-opensans;
+    color: $black-color;
+    @include responsive(sm) {
+       font-size: 16px;
+    }
+    @include responsive(xs) {
+       font-size: 14px;
+    }
+}
+
+
+.product-cards{
+   width: 100%;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+   grid-gap: 20px;
+
+   @include responsive(xxl) {
+       grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+   }
+
+   @include responsive(lg) {
+       grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+   }
+
+   @include responsive(sm) {
+       grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+   }
+
+   @include responsive(xs) {
+       grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+   }
+}
+
+.section-padding{
+   padding: 140px 0;
+
+   @include responsive(lg) {
+       padding: 110px 0;
+   }
+
+   @include responsive(md) {
+       padding: 100px 0;
+   }
+
+   @include responsive(sm) {
+       padding: 80px 0;
+   }
+
+   @include responsive(xs) {
+       padding: 60px 0;
+   }
+}

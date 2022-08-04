@@ -1,0 +1,197 @@
+// * Footer Section Styles
+.footer {
+    &__main {
+        width: 100%;
+        padding-bottom: 145px;
+
+        @include responsive(sm) {
+            padding-bottom: 90px;
+        }
+    }
+
+    &__boxs {
+        width: 100%;
+        @include flex(space-between, stretch, row);
+        gap: 50px;
+
+        @include responsive(md) {
+            flex-wrap: wrap
+        }
+
+        @include responsive(sm) {
+            flex-direction: column
+        }
+
+        @include responsive(xs) {
+            gap: 30px;
+        }
+    }
+
+    &__box {
+        @include flex(flex-start, flex-start, column);
+        flex: 1;
+
+        &-large {
+            flex: 2;
+            align-items: center;
+
+            @include responsive(sm) {
+                align-items: flex-start !important;
+                text-align: left !important;
+            }
+        }
+
+        &:first-child {
+            align-items: flex-end;
+            text-align: end;
+            padding-right: 20px;
+            border-right: 1px solid #D5D5D5;
+
+            @include responsive(sm) {
+                order: 4;
+            }
+        }
+
+        &:nth-child(2) {
+            align-items: center;
+            text-align: center;
+        }
+
+        &:last-child {
+            padding-left: 20px;
+            border-left: 1px solid #D5D5D5;
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 42px;
+
+            @include responsive(sm) {
+                font-size: 24px;
+            }
+
+            @include responsive(xs) {
+                font-size: 20px;
+            }
+        }
+
+
+        &-description {
+            @extend .description-1;
+            margin-bottom: 60px;
+            text-align: center;
+
+            @include responsive(sm) {
+                margin-bottom: 37px;
+                width: 80%;
+                text-align: left;
+            }
+        }
+
+        &-texts {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            gap: 24px;
+
+            span {
+                @extend .description-1;
+            }
+        }
+
+        @include responsive(sm) {
+            align-items: flex-start !important;
+            text-align: left !important;
+            border: none !important;
+            padding: 0 !important;
+        }
+    }
+
+    &__addresses {
+        width: 100%;
+        margin-top: 34px;
+        display: flex;
+        flex-direction: column;
+        gap: 38px;
+
+        @include responsive(xs) {
+            margin-top: 20px;
+            gap: 20px;
+        }
+    }
+
+    &__address {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        span,
+        h5 {
+            @extend .description-1;
+        }
+
+        h5 {
+            font-weight: 700;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 45px;
+
+        @include responsive(sm) {
+            margin-bottom: 20px;
+        }
+
+        @include responsive(xs) {
+            width: 150px;
+        }
+    }
+
+    &__social-icons {
+        width: 100%;
+        @include center;
+        gap: 20px;
+
+        @include responsive(sm) {
+            justify-content: flex-start;
+        }
+    }
+
+    &__social-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        @include center;
+        background-color: #EFF6F1;
+
+        svg {
+            fill: $primary-color;
+        }
+
+        @include responsive(xs) {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &__bottom {
+        @include center;
+        text-align: center;
+        width: 100%;
+        padding: 27px 0 22px 0;
+        border-top: 1px solid #D5D5D5;
+
+        p {
+            @extend .description-1;
+
+            a {
+                color: $primary-color;
+                @extend .description-1;
+
+            }
+        }
+    }
+
+
+}

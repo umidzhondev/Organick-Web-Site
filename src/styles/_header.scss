@@ -1,0 +1,275 @@
+.header {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #fff;
+
+    @include responsive(md) {
+        padding: 10px 0;
+    }
+
+    @include responsive(xs) {
+        padding: 0;
+    }
+
+    .navbar {
+        padding: 20px 0;
+        width: 100%;
+        @include flex(space-between, center, row);
+
+        @include responsive(xxs) {
+           padding: 15px 0;
+        }
+        &__logo {
+            height: 65px;
+            @include center;
+
+            @include responsive(md) {
+                width: 90%;
+            }
+
+            @include responsive(xs) {
+                width: 85%;
+            }
+        }
+
+        &__main {
+            @include flex(flex-start, center, row);
+            gap: 120px;
+
+            @include responsive(lg) {
+                gap: 0;
+            }
+
+            @include responsive(md) {}
+        }
+
+        &__button {
+            @include flex(center, center, row);
+            gap: 10px;
+            background-color: transparent;
+            border: 1px solid #D4D4D4;
+            border-radius: 33px;
+            padding: 7px 28px 7px 11px;
+            @include hoverEffect;
+
+            @include responsive(md) {
+                display: flex;
+                padding: 5px 23px 5px 11px;
+                margin-left: 30%;
+            }
+
+            @include responsive(sm) {
+                margin-left: 15%;
+            }
+
+            @include responsive(xs) {
+                margin-left: 0;
+                margin: 0 10px;
+            }
+
+            @include responsive(xxs) {
+                padding: 4px 10px 4px 10px;
+            }
+
+            &-icon {
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                @include center;
+                background-color: $primary-color;
+
+                @include responsive(md) {
+                    width: 45px;
+                    height: 45px;
+                }
+
+                @include responsive(xs) {
+                    width: 35px;
+                    height: 35px;
+                }
+
+
+                img {
+                    width: 26px;
+                    height: 24px;
+
+                    @include responsive(md) {
+                        width: 22px;
+                        height: 20px;
+                    }
+
+                    @include responsive(xs) {
+                        width: 18px;
+                        height: 17px;
+                    }
+                }
+            }
+
+            &-text {
+                @include center;
+                gap: 7px;
+                font-size: 17px;
+                font-weight: 400;
+                color: $primary-color;
+
+                span {
+                    font-size: 18px;
+                    line-height: 18px;
+                    font-weight: inherit;
+                    color: inherit
+                }
+
+                @include responsive(xs) {
+                    font-size: 15px;
+
+                    span {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            &:hover {
+                border: 1px solid $primary-color;
+            }
+
+
+        }
+
+        &__open-icon {
+            display: none !important;
+            color: $primary-color;
+            font-size: 2.2rem;
+            cursor: pointer;
+            @include center;
+            margin-right: 30px;
+
+            @include responsive(md) {
+                display: flex !important;
+            }
+
+            @include responsive(xs) {
+                margin-right: 0;
+            }
+
+            @include responsive(xxs) {
+                font-size: 2rem;
+            }
+        }
+
+        &__close-icon {
+            display: none;
+            color: #fff;
+            position: absolute;
+            right: 60px;
+            top: 55px;
+            font-size: 2.2rem;
+            cursor: pointer;
+
+            @include responsive(md) {
+                display: flex !important;
+            }
+
+            @include responsive(xs) {
+                right: 35px;
+                top: 40px;
+            }
+        }
+
+
+    }
+
+    &__navigation {
+        @include responsive(md) {
+            position: fixed;
+            background-color: $primary-color;
+            height: 100%;
+            width: 40%;
+            z-index: 9999;
+            top: 0;
+            right: -100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            transition: right .6s ease;
+        }
+
+        @include responsive(xs) {
+            width: 60%;
+        }
+
+        @include responsive(xxs) {
+            width: 65%;
+        }
+
+        &.open {
+            right: 0;
+        }
+
+        &-links {
+            @include flex(center, center, row);
+
+            @include responsive(md) {
+                width: 100%;
+                padding: 30px;
+                gap: 30px;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 70%;
+            }
+            @include responsive(xs) {
+               margin-top: 50%;
+            }
+            @include responsive(ss) {
+               margin-top: 45%;
+            }
+        }
+
+        &-item {
+            margin-left: 40px;
+            list-style-type: none;
+
+            @include responsive(md) {
+                margin: 0;
+                @include hoverEffect;
+                width: 100%;
+                padding: 10px 20px;
+                border-radius: 8px;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #fff;
+
+                    a {
+                        color: $primary-color;
+
+                        &.active--link {
+                            color: $green-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-link {
+            text-decoration: none;
+            color: $primary-color;
+            @include hoverEffect;
+
+            &.active--link {
+                color: $green-color;
+            }
+
+            &:hover,
+            &:active {
+                color: $green-color;
+            }
+
+            @include responsive(md) {
+                width: 100%;
+                color: #fff;
+            }
+        }
+
+    }
+
+}

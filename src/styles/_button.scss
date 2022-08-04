@@ -1,0 +1,92 @@
+.button {
+    padding: 20px 9px 20px 33px;
+    border: 1px solid #EFD372;
+    border-radius: 16px;
+    @include center;
+    gap: 24px;
+    @include transition(transform, .4s, ease-in-out);
+
+    span {
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 32px;
+        letter-spacing: 0.36px;
+        text-transform: capitalize;
+
+        @include responsive(xs) {
+            font-size: 16px;
+        }
+    }
+
+    &__imgbox {
+        width: 38px;
+        height: 38px;
+        @include center;
+        border-radius: 50%;
+        background-color: #335B6B;
+
+        img {
+            width: 15px;
+        }
+
+        @include responsive(xs) {
+            width: 34px;
+        }
+    }
+
+    @include responsive(sm) {
+        padding: 18px 9px 18px 22px;
+    }
+
+    @include responsive(xs) {
+        padding: 14px 9px 14px 22px;
+    }
+
+    @include responsive(xxs) {
+        padding: 10px 9px 10px 15px;
+    }
+
+
+    &.bg-yellow-btn {
+        background-color: $yellow-color;
+        border-color: $yellow-color;
+
+        span {
+            color: $primary-color;
+        }
+    }
+
+    &.bg-blue-btn {
+        background-color: $primary-color;
+        border-color: $primary-color;
+
+        span {
+            color: #fff;
+        }
+    }
+
+    &.bg-white-btn {
+        background-color: #fff;
+        border-color: $primary-color;
+        @include hoverEffect;
+
+        span {
+            color: $primary-color;
+            @include hoverEffect;
+
+        }
+
+        &:hover {
+            background-color: $primary-color;
+
+            span {
+                color: #fff;
+            }
+        }
+    }
+
+    &:hover {
+        opacity: .8;
+    }
+
+}
